@@ -163,7 +163,7 @@ def render_welcome(string_list, buffer = 8):
 	:param buffer: Number of spaces to include on sides
 	:return: Returns a list of strings with border attached
 	"""
-	max_line = max(map(len,string_list)) #Finds max of string_list using length of each string
+	max_line = max(list(map(len,string_list))) #Finds max of string_list using length of each string
 	msg_list = [] #empty list to be appended later
 	msg_list.append("+" + "=" * (max_line + buffer) + "+") #Top border
 	msg_list.append("|" + " " * (max_line + buffer) + "|") #Space between top border and words
